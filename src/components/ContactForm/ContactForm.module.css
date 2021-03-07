@@ -10,3 +10,7 @@
   width: 70%;
   margin-left: 15%;
 }
+
+label:not(:first-child) {
+  margin-top: 10px;
+}
