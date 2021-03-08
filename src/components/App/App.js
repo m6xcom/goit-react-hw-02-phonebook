@@ -18,15 +18,11 @@ class App extends Component {
       alert(`${contact.name} is already in contacts.`);
     }
   };
-  deleteContact = (e) => {
-    const contactId = e.target.dataset.id;
-    this.state.contacts.forEach((el) => {
-      if (el.id === contactId) {
-        this.state.contacts.splice(this.state.contacts.indexOf(el), 1);
-        this.setState({
-          contacts: this.state.contacts,
-        });
-      }
+  deleteContact = (contactId) => {
+    this.setState({
+      contacts: this.state.contacts.filter((el) => {
+        return el.id !== contactId;
+      }),
     });
   };
   filterChange = (filter) => {
