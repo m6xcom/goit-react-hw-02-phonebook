@@ -45,7 +45,7 @@ class ContactForm extends Component {
           id={numberInput}
           name="number"
           onChange={this.handleChange}
-          type="text"
+          type="tel"
         ></input>
         <button className={style.addContactBtn} type="submit">
           Add contact
