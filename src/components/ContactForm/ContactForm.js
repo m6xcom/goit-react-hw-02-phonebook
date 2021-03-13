@@ -30,6 +30,7 @@ class ContactForm extends Component {
             name: this.state.name,
             number: this.state.number,
           });
+          e.target.reset();
         }}
       >
         <label htmlFor={nameInput}>Name</label>
